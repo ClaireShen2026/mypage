@@ -15,7 +15,6 @@
     --white:#ffffff;
     --text:#202020;
     --muted:#7a7a7a;
-    --line:#e5e5e5;
 }
 
 *{
@@ -25,22 +24,23 @@
 }
 
 body{
-    background:#ffffff; /* ✅ only confirmed change */
+    background:#ffffff;
     font-family:'Inter',sans-serif;
     color:var(--text);
 }
 
-/* HEADER */
+/* =========================
+   HEADER (MATCH HOMEPAGE EXACTLY)
+   ========================= */
+
 header{
     background:var(--header);
-    border-bottom:1px solid var(--line);
 }
 
 .nav{
-    max-width:1100px;
+    max-width:1400px;
     margin:0 auto;
-    padding:32px 60px;
-
+    padding:32px 90px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -48,8 +48,7 @@ header{
 
 .logo{
     font-family:'Newsreader',serif;
-    font-size:30px;
-    font-weight:400;
+    font-size:36px;
 }
 
 .logo a{
@@ -59,16 +58,19 @@ header{
 
 .menu{
     display:flex;
-    gap:30px;
+    gap:36px;
 }
 
 .menu a{
     text-decoration:none;
     color:#111;
-    font-size:14px;
+    font-size:16px;
 }
 
-/* MAIN (UNCHANGED STRUCTURE) */
+/* =========================
+   MAIN (UNCHANGED)
+   ========================= */
+
 main{
     max-width:600px;
     margin:120px auto;
@@ -164,7 +166,6 @@ footer{
 
     <nav class="menu">
         <a href="index.html">journal</a>
-        <a href="about.html">about</a>
         <a href="connect.html">connect</a>
     </nav>
 

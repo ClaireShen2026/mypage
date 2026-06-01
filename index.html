@@ -18,7 +18,13 @@
     --text:#111;
     --muted:#8a8a8a;
     --line:#e9e9e9;
+
+    --header-a:#efefec;
+    --header-b:#f5f3ef;
+    --header-c:#f1f4f2;
 }
+
+/* RESET */
 
 *{
     margin:0;
@@ -31,15 +37,20 @@ body{
     color:var(--text);
     font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
     -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
 }
 
 /* HEADER */
 
 header{
-    max-width:900px;
+    background:var(--header-a);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    max-width:1100px;
     margin:0 auto;
-    padding:42px 20px 10px;
+    padding:34px 60px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -47,110 +58,121 @@ header{
 
 .logo{
     font-family:'Newsreader', serif;
-    font-size:28px;
+    font-size:30px;
     font-weight:400;
-    letter-spacing:-0.02em;
 }
 
 nav a{
-    margin-left:24px;
+    margin-left:26px;
     text-decoration:none;
-    color:var(--text);
+    color:#111;
     font-size:14px;
 }
 
 /* MAIN */
 
 main{
-    max-width:900px;
-    margin:60px auto 140px;
-    padding:0 20px;
+    max-width:1100px;
+    margin:70px auto 120px;
+    padding:0 60px;
 }
 
-/* SECTIONS */
+/* INTRO */
 
-.section{
+.intro{
     margin-bottom:60px;
 }
 
-.label{
-    font-size:12px;
-    letter-spacing:0.12em;
-    color:var(--muted);
-    margin-bottom:14px;
-    text-transform:uppercase;
-}
-
-/* TYPOGRAPHY */
-
-h1{
+.intro h1{
     font-family:'Newsreader', serif;
     font-size:44px;
     font-weight:400;
     letter-spacing:-0.02em;
-    margin-bottom:18px;
-}
-
-p{
-    font-size:18px;
-    line-height:1.8;
-    color:#111;
-}
-
-/* LIST ITEMS */
-
-.item{
     margin-bottom:10px;
-    font-size:17px;
+}
+
+.intro p{
+    font-size:16px;
+    color:var(--muted);
+    max-width:700px;
     line-height:1.7;
 }
 
-.item a{
-    text-decoration:none;
-    color:var(--text);
-    border-bottom:1px solid #ddd;
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:34px;
 }
 
-.item a:hover{
-    border-bottom:1px solid #111;
+/* CARD */
+
+.card{
+    border:1px solid var(--line);
+    overflow:hidden;
+    background:#fff;
+    transition:0.2s ease;
 }
 
-/* META BLOCK */
+.card:hover{
+    transform:translateY(-2px);
+}
 
-.meta{
-    color:var(--muted);
+.thumb{
+    height:220px;
+    background:#ddd;
+}
+
+.card:nth-child(1) .thumb{ background:var(--header-a); }
+.card:nth-child(2) .thumb{ background:var(--header-b); }
+.card:nth-child(3) .thumb{ background:var(--header-c); }
+
+.content{
+    padding:22px 22px 26px;
+}
+
+.title{
+    font-family:'Newsreader', serif;
+    font-size:22px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+.excerpt{
     font-size:15px;
     line-height:1.7;
+    color:#444;
+    margin-bottom:14px;
+}
+
+.meta{
+    font-size:12px;
+    color:var(--muted);
 }
 
 /* FOOT */
 
 footer{
-    margin-top:80px;
+    margin-top:90px;
     font-size:14px;
     color:var(--muted);
 }
 
-footer a{
-    color:var(--text);
-    text-decoration:none;
-    border-bottom:1px solid #ddd;
-}
-
-footer a:hover{
-    border-bottom:1px solid #111;
-}
-
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:900px){
 
-    h1{
-        font-size:34px;
+    main{
+        padding:0 22px;
     }
 
-    p{
-        font-size:16.5px;
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro h1{
+        font-size:34px;
     }
 }
 
@@ -160,73 +182,46 @@ footer a:hover{
 <body>
 
 <header>
+<div class="nav">
     <div class="logo">Claire Shen</div>
     <nav>
-        <a href="index.html">home</a>
+        <a href="index.html">journal</a>
         <a href="about.html">about</a>
         <a href="connect.html">connect</a>
     </nav>
+</div>
 </header>
 
 <main>
 
-<!-- IDENTITY -->
+<!-- INTRO -->
 
-<div class="section">
-    <div class="label">Now</div>
-    <h1>Learning to orient my life beyond romance</h1>
-    <p class="meta">
-        I used to move through life guided by relationships.<br>
-        Now I am learning to follow what genuinely draws me—curiosity, energy, and direction as a person.
+<div class="intro">
+    <h1>Writing as a way of reorienting life</h1>
+    <p>
+        I write to understand how I move through attachment, autonomy, and the search for a life that feels genuinely my own.
     </p>
 </div>
 
-<!-- CURRENT THINKING -->
+<!-- GRID -->
 
-<div class="section">
-    <div class="label">Current focus</div>
-    <p class="item">• Attachment vs autonomy in relationships</p>
-    <p class="item">• What makes a place feel livable</p>
-    <p class="item">• Building a life that does not rely on emotional compromise</p>
+<div class="grid">
+
+    <a class="card" href="beyond-romance.html">
+        <div class="thumb"></div>
+        <div class="content">
+            <div class="title">Beyond Romance</div>
+            <div class="excerpt">
+                I used to move through life guided by relationships. Now I am learning to follow what excites me as a person, not as someone in love.
+            </div>
+            <div class="meta">June 2026 · essay</div>
+        </div>
+    </a>
+
 </div>
-
-<!-- LATEST WRITING -->
-
-<div class="section">
-    <div class="label">Latest essay</div>
-    <p class="item">
-        <a href="beyond-romance.html">Beyond Romance</a>
-    </p>
-</div>
-
-<!-- WRITING SYSTEM -->
-
-<div class="section">
-    <div class="label">Writing</div>
-    <p class="item">
-        Essays — long-form thinking in progress
-    </p>
-    <p class="item">
-        Notes — short reflections
-    </p>
-    <p class="item">
-        Fragments — raw thoughts
-    </p>
-</div>
-
-<!-- ABOUT -->
-
-<div class="section">
-    <div class="label">About</div>
-    <p class="meta">
-        This site is a living record of how I think, move, and reorient my life over time.
-    </p>
-</div>
-
-<!-- CONTACT -->
 
 <footer>
-    Contact: <a href="mailto:hello@claire-shen.com">hello@claire-shen.com</a>
+Contact: hello@claire-shen.com
 </footer>
 
 </main>

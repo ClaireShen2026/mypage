@@ -78,19 +78,21 @@ header{
 
 main{
     max-width:1400px;
-    margin:50px auto 220px;
+    margin:55px auto 220px;
     padding:0 90px;
 }
 
+/* FEATURED ARTICLE */
+
 .featured{
     display:grid;
-    grid-template-columns:420px 1fr;
-    gap:70px;
+    grid-template-columns:360px 1fr;
+    gap:72px;
     align-items:start;
 }
 
 .cover{
-    aspect-ratio:16/9;
+    aspect-ratio:4 / 3;
     overflow:hidden;
 }
 
@@ -105,15 +107,18 @@ main{
     font-size:13px;
     color:var(--muted);
     margin-bottom:18px;
+    letter-spacing:0.01em;
 }
 
 .title{
     font-family:'Newsreader',serif;
-    font-size:34px;
+    font-size:30px;
     font-weight:400;
-    line-height:1.15;
-    max-width:520px;
-    margin-bottom:22px;
+    line-height:1.18;
+
+    max-width:500px;
+
+    margin-bottom:20px;
 }
 
 .title a{
@@ -127,14 +132,18 @@ main{
 
 .excerpt{
     max-width:520px;
+
     font-size:16px;
     line-height:1.9;
+
     color:#555;
 }
 
 .spacer{
     height:650px;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -168,11 +177,11 @@ main{
     }
 
     .title{
-        font-size:30px;
+        font-size:28px;
     }
 
     .spacer{
-        height:300px;
+        height:260px;
     }
 }
 
@@ -207,7 +216,9 @@ main{
 
             <a href="posts/love-autonomy.html">
 
-                <img src="images/IMG_1464.jpeg" alt="Love Used to Move Me">
+                <img
+                    src="images/IMG_1464.jpeg"
+                    alt="Love Used to Move Me">
 
             </a>
 

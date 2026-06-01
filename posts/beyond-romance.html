@@ -33,7 +33,7 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
-/* HEADER (same as homepage) */
+/* HEADER */
 
 header{
     background:var(--header);
@@ -70,19 +70,13 @@ header{
     color:#111;
     text-decoration:none;
     font-size:16px;
-    font-weight:400;
-    text-transform:lowercase;
-}
-
-.menu a:hover{
-    opacity:.6;
 }
 
 /* MAIN */
 
 main{
-    max-width:820px;
-    margin:70px auto 160px;
+    max-width:760px;
+    margin:70px auto 120px;
     padding:0 28px;
 }
 
@@ -100,40 +94,44 @@ h1{
     font-family:'Newsreader',serif;
     font-size:38px;
     font-weight:400;
-    line-height:1.25;
     margin-bottom:50px;
 }
 
-/* ARTICLE */
+/* ARTICLE TYPOGRAPHY */
 
 .article{
     font-size:18px;
-    line-height:1.95;
-    color:#1a1a1a;
+    line-height:1.9;
 }
 
+/* small paragraph spacing */
 .article p{
-    margin-bottom:20px;
+    margin:0;
 }
 
-/* SECTION SPACING */
+/* normal spacing between paragraphs */
+.article p + p{
+    margin-top:16px;
+}
 
+/* SECTION BREAKS (big gaps) */
 .section{
-    margin-top:28px;
+    margin-top:42px;
 }
 
-/* QUOTE BREAK STYLE */
-
+/* STRONG BREAK */
 .break{
-    margin:32px 0;
-    font-size:18px;
-    font-weight:400;
+    margin:36px 0;
+    font-weight:500;
 }
 
-/* FOOT NOTE STYLE (optional visual emphasis) */
+/* SYSTEM FOOTER */
 
-.emphasis{
-    margin-top:28px;
+footer{
+    margin-top:80px;
+    text-align:center;
+    font-size:12px;
+    color:#999;
 }
 
 /* MOBILE */
@@ -144,15 +142,7 @@ h1{
         padding:28px 22px;
         flex-direction:column;
         align-items:flex-start;
-        gap:18px;
-    }
-
-    .logo{
-        font-size:32px;
-    }
-
-    .menu{
-        gap:22px;
+        gap:16px;
     }
 
     main{
@@ -165,7 +155,6 @@ h1{
 
     .article{
         font-size:16px;
-        line-height:1.85;
     }
 }
 
@@ -175,7 +164,6 @@ h1{
 <body>
 
 <header>
-
 <div class="nav">
 
     <div class="logo">
@@ -189,7 +177,6 @@ h1{
     </nav>
 
 </div>
-
 </header>
 
 <main>
@@ -208,19 +195,19 @@ h1{
 
 <p class="break">No. And no.</p>
 
-<p>Yesterday, we had a mild quarrel that began with travel plans and shifted into different ideas of how we want to live.</p>
+<div class="section">
 
-<p>She needed a break, but options were limited by cost and time. I didn’t feel comfortable spending on a short trip while our daily life still felt unstable. What started as a practical discussion gradually turned into something larger.</p>
+<p>First, I cannot sort out my love life on my own. No matter how hard I try, explanation does not always lead to understanding.</p>
 
-<p>I wasn’t okay with staying in Guangdong forever, and when I mentioned the idea of moving back to Shanghai—hopefully together—it was taken as an offense. She thought I was being unrealistic because she could not afford that life, and that imagining an ideal future meant I was deeply dissatisfied with the present one.</p>
+<p>Yesterday we had a mild quarrel that began with travel plans and shifted into how we want to live. I wasn't okay with staying in Guangdong forever, and when I mentioned the idea of moving back to Shanghai—hopefully together—it was taken as an offense. She thought I was being unrealistic because she could not afford that life, and that imagining an ideal future meant I was deeply dissatisfied with the present one.</p>
 
 <p>I fell silent, with quiet grief. It felt like whatever gave me hope was experienced as pressure or critique. And I realized again that no amount of proximity or explanation can guarantee understanding between two people whose internal worlds are different.</p>
 
-<p class="section">Then something else became clear.</p>
+</div>
 
-<p>I had started to pay more attention to what I actually want in life—not as someone in love, but as a human being. I was no longer treating “whatever keeps the relationship alive” as the highest priority.</p>
+<div class="section">
 
-<p>That was the second no.</p>
+<p>Then something else became clear. I had started to pay more attention to what I actually want in life—not as someone in love, but as a human being. I was no longer treating “whatever keeps the relationship alive” as the highest priority.</p>
 
 <p>Not everywhere works. Not every life is interchangeable.</p>
 
@@ -228,7 +215,11 @@ h1{
 
 <p>I need a city that nourishes me, not one that drains me. I need a climate that my body can live in, not one that leaves it struggling with heat, humidity, mosquito bites, and exhaustion. I need connection to a wider world beyond my immediate environment, something intellectually alive and expansive. I need time and space to read, think, and write. I need a stable home that feels inhabitable and grounded—one that does not require constant adaptation, one temporary arrangement after another.</p>
 
-<p class="section">I thought knowing myself and my partner more would lead to a better relationship, and therefore a better life—whatever form that might take.</p>
+</div>
+
+<div class="section">
+
+<p>I thought knowing myself and my partner more would lead to a better relationship, and therefore a better life—whatever form that might take.</p>
 
 <p>And because understanding two people already felt like enough work, alongside building a new life in a kind of vacuum period, I thought that was it. That this was the great climb. I must have been close to the summit.</p>
 
@@ -236,15 +227,19 @@ h1{
 
 <p>What I thought was the end was only the beginning. Knowing myself and my partner did not resolve life—it revealed how far I still have to travel toward a life that actually fits me, and how each person’s path is ultimately solitary.</p>
 
-<p>We are all solitary planets, moving through space, occasionally crossing paths when our orbits align.</p>
-
-<p>With or without a partner—no matter which partner—the question remains:</p>
+<p>Our paths may cross, but the question remains:</p>
 
 <p>What do I want in life? How do I get there? How much further is it?</p>
 
-<p class="emphasis">At least now I have a compass.</p>
+<p class="break">At least now I have a compass.</p>
 
-<p class="emphasis">Welcome to my new age.</p>
+<p>Welcome to my new age.</p>
+
+</div>
+
+<footer>
+  Claire Shen. Personal Publishing System. © 2026
+</footer>
 
 </div>
 

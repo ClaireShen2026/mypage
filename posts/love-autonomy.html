@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<!-- ⭐ SAME FONT SYSTEM AS HOMEPAGE -->
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -32,14 +33,15 @@
 body{
     background:#fff;
     color:var(--text);
+
+    /* ⭐ EXACT SAME AS HOMEPAGE */
     font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 }
 
-/* =========================================================
-   HEADER — NOW MATCHING HOMEPAGE EXACTLY
-   ========================================================= */
+/* HEADER — SAME SYSTEM */
 
 header{
     background:var(--header);
@@ -81,7 +83,7 @@ header{
     text-transform:lowercase;
 }
 
-/* MAIN LAYOUT */
+/* MAIN */
 
 main{
     max-width:660px;
@@ -89,7 +91,7 @@ main{
     padding:0 26px;
 }
 
-/* META */
+/* META (same system as typical homepage usage) */
 
 .meta{
     font-size:12px;
@@ -109,26 +111,23 @@ h1{
     margin-bottom:64px;
 }
 
-/* ARTICLE */
+/* ⭐ BODY — NOW FULLY MATCHING HOMEPAGE INTER SYSTEM */
 
 .article{
-    font-size:18.5px;
-    line-height:1.95;
-    font-weight:300;
-    color:#1a1a1a;
+    font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
 
-    font-variant-ligatures: common-ligatures;
-    font-feature-settings: "liga" 1, "kern" 1;
+    font-size:15px;   /* ⭐ IMPORTANT: match homepage baseline */
+    font-weight:400;  /* ⭐ unify (no special 300 anymore) */
+    line-height:2.1;  /* ⭐ match your homepage feel */
+
+    color:#333;
 }
 
 .article p{
-    margin:0;
-    margin-bottom:22px;
+    margin-bottom:34px;
 }
 
-.article p:first-of-type{
-    margin-bottom:18px;
-}
+/* LINKS */
 
 .article a{
     color:#111;
@@ -144,12 +143,12 @@ h1{
 
 .back a{
     text-decoration:none;
-    color:#999;
-    font-size:13px;
+    color:#777;
+    font-size:14px;
 }
 
 .back a:hover{
-    color:#111;
+    color:#222;
 }
 
 /* MOBILE */
@@ -167,18 +166,14 @@ h1{
         font-size:32px;
     }
 
-    .menu{
-        gap:24px;
-    }
-
     h1{
         font-size:32px;
         margin-bottom:48px;
     }
 
     .article{
-        font-size:17px;
-        line-height:1.85;
+        font-size:15px;
+        line-height:2;
     }
 }
 

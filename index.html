@@ -14,10 +14,10 @@
 <style>
 
 :root{
-    --paper:#fbfbf9;
-    --header:#f0f0ed;
-    --text:#222;
-    --muted:#777;
+    --paper:#f9f8f5;
+    --header:#efefec;
+    --text:#202020;
+    --muted:#7a7a7a;
 }
 
 *{
@@ -43,7 +43,7 @@ header{
     max-width:1400px;
     margin:0 auto;
 
-    padding:38px 80px;
+    padding:32px 90px;
 
     display:flex;
     justify-content:space-between;
@@ -52,7 +52,7 @@ header{
 
 .logo{
     font-family:'Newsreader',serif;
-    font-size:42px;
+    font-size:36px;
     font-weight:400;
     letter-spacing:-0.03em;
 }
@@ -64,15 +64,16 @@ header{
 
 .menu{
     display:flex;
-    gap:34px;
+    gap:36px;
 }
 
 .menu a{
-    color:#333;
+    color:#111;
     text-decoration:none;
 
-    font-size:15px;
-    font-weight:300;
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:-0.01em;
 
     text-transform:lowercase;
 }
@@ -85,21 +86,29 @@ header{
 
 main{
     max-width:1400px;
-    margin:70px auto 240px;
-    padding:0 80px;
+    margin:50px auto 220px;
+    padding:0 90px;
 }
 
-/* ---------- ARTICLE ---------- */
+/* ---------- FEATURED ARTICLE ---------- */
 
 .featured{
     display:grid;
-    grid-template-columns:260px 1fr;
-    gap:65px;
+    grid-template-columns:420px 1fr;
+    gap:70px;
     align-items:start;
+}
+
+.cover{
+    width:100%;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
 }
 
 .cover img{
     width:100%;
+    height:100%;
+    object-fit:cover;
     display:block;
 }
 
@@ -107,15 +116,16 @@ main{
     font-size:13px;
     color:var(--muted);
     margin-bottom:18px;
+    letter-spacing:0.01em;
 }
 
 .title{
     font-family:'Newsreader',serif;
-    font-size:48px;
+    font-size:34px;
     font-weight:400;
-    line-height:1.05;
+    line-height:1.15;
 
-    max-width:680px;
+    max-width:520px;
 
     margin-bottom:22px;
 }
@@ -130,18 +140,18 @@ main{
 }
 
 .excerpt{
-    max-width:600px;
+    max-width:520px;
 
     font-size:16px;
-    line-height:1.85;
+    line-height:1.9;
 
     color:#555;
 }
 
-/* ---------- EMPTY SPACE ---------- */
+/* ---------- SPACE FOR FUTURE ARTICLES ---------- */
 
 .spacer{
-    height:600px;
+    height:650px;
 }
 
 /* ---------- MOBILE ---------- */
@@ -150,26 +160,27 @@ main{
 
     .nav{
         padding:28px 24px;
+
         flex-direction:column;
         align-items:flex-start;
         gap:18px;
     }
 
     .logo{
-        font-size:34px;
+        font-size:32px;
     }
 
     .menu{
-        gap:20px;
+        gap:22px;
     }
 
     .menu a{
-        font-size:14px;
+        font-size:15px;
     }
 
     main{
         padding:0 24px;
-        margin-top:40px;
+        margin-top:36px;
     }
 
     .featured{
@@ -177,8 +188,20 @@ main{
         gap:28px;
     }
 
+    .cover{
+        aspect-ratio:16 / 9;
+    }
+
     .title{
-        font-size:38px;
+        font-size:30px;
+    }
+
+    .excerpt{
+        font-size:15px;
+    }
+
+    .spacer{
+        height:300px;
     }
 }
 

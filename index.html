@@ -6,16 +6,14 @@
 
 <title>Claire Shen</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <style>
 
 :root{
-    --bg:#ffffff;
-    --text:#111111;
-    --muted:#777777;
-    --border:#ececec;
+    --paper:#faf8f4;
+    --header:#f3f0ea;
+    --text:#2f2d2a;
+    --muted:#7d7972;
+    --border:#e8e4de;
 }
 
 *{
@@ -25,13 +23,18 @@
 }
 
 body{
-    background:var(--bg);
+    background:var(--paper);
     color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-    line-height:1.6;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+    -webkit-font-smoothing:antialiased;
 }
 
-/* ---------- Header ---------- */
+/* ---------- HEADER ---------- */
 
 header{
     position:fixed;
@@ -40,67 +43,87 @@ header{
     width:100%;
     height:72px;
 
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(12px);
+    background:rgba(243,240,234,.92);
+
+    backdrop-filter:blur(18px);
 
     border-bottom:1px solid var(--border);
 
-    z-index:100;
+    z-index:999;
 }
 
 .nav{
-    max-width:1200px;
-    height:100%;
+    max-width:1280px;
     margin:auto;
-
-    padding:0 40px;
+    height:100%;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    padding:0 48px;
 }
 
 .logo{
-    font-size:15px;
-    letter-spacing:.08em;
-    font-weight:500;
+    font-family:
+    Baskerville,
+    "Iowan Old Style",
+    Palatino,
+    serif;
+
+    font-size:26px;
+    font-weight:400;
+
+    letter-spacing:-0.02em;
+
+    color:var(--text);
 }
 
 .menu{
     display:flex;
-    gap:36px;
+    gap:34px;
 }
 
 .menu a{
     text-decoration:none;
-    color:var(--text);
+
+    color:var(--muted);
+
     font-size:14px;
-    transition:.2s;
+    letter-spacing:.02em;
+
+    transition:.2s ease;
 }
 
 .menu a:hover{
-    opacity:.5;
+    color:var(--text);
 }
 
-/* ---------- Main ---------- */
+/* ---------- MAIN ---------- */
 
 main{
-    max-width:1200px;
+    max-width:1280px;
     margin:auto;
+
     padding-top:120px;
-    padding-left:40px;
-    padding-right:40px;
+    padding-left:48px;
+    padding-right:48px;
 }
 
-/* ---------- Article ---------- */
+/* ---------- ARTICLE ---------- */
 
 .article{
     display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:80px;
 
-    margin-bottom:120px;
+    grid-template-columns:
+    minmax(400px,700px)
+    1fr;
+
+    gap:90px;
+
     align-items:center;
+
+    margin-bottom:140px;
 }
 
 .article-image{
@@ -111,62 +134,82 @@ main{
     width:100%;
     display:block;
 
-    transition:transform .6s ease;
+    transition:transform .8s ease;
 }
 
 .article:hover img{
-    transform:scale(1.03);
+    transform:scale(1.02);
 }
 
 .article-content{
-    max-width:420px;
+    max-width:460px;
 }
 
 .article-date{
     font-size:13px;
     color:var(--muted);
+
     margin-bottom:18px;
+
+    letter-spacing:.04em;
 }
 
 .article-title{
-    font-family:Georgia, serif;
-    font-size:42px;
-    line-height:1.2;
+    font-family:
+    Baskerville,
+    "Iowan Old Style",
+    Palatino,
+    serif;
+
+    font-size:54px;
     font-weight:400;
-    margin-bottom:20px;
+
+    line-height:1.08;
+
+    margin-bottom:24px;
 }
 
 .article-title a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 .article-title a:hover{
-    opacity:.7;
+    opacity:.75;
 }
 
 .article-excerpt{
-    color:#555;
-    font-size:17px;
+    font-size:18px;
+    line-height:1.8;
+
+    color:#5f5a55;
 }
 
-/* ---------- Mobile ---------- */
+/* ---------- MOBILE ---------- */
 
 @media(max-width:900px){
 
+    .nav{
+        padding:0 24px;
+    }
+
+    main{
+        padding-left:24px;
+        padding-right:24px;
+    }
+
     .article{
         grid-template-columns:1fr;
-        gap:30px;
+        gap:32px;
     }
 
     .article-title{
-        font-size:30px;
+        font-size:38px;
     }
 
     .menu{
-        gap:20px;
+        gap:18px;
     }
-
 }
 
 </style>
@@ -175,10 +218,11 @@ main{
 <body>
 
 <header>
+
     <div class="nav">
 
         <div class="logo">
-            CLAIRE SHEN
+            Claire Shen
         </div>
 
         <nav class="menu">
@@ -188,17 +232,17 @@ main{
         </nav>
 
     </div>
+
 </header>
 
 <main>
-
-    <!-- ARTICLE 1 -->
 
     <article class="article">
 
         <div class="article-image">
             <a href="posts/love-autonomy.html">
-                <img src="images/love-autonomy-cover.jpg" alt="">
+                <img src="images/love-autonomy-cover.jpg"
+                     alt="Love Used to Move Me">
             </a>
         </div>
 

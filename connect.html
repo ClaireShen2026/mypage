@@ -6,16 +6,13 @@
 
 <title>Connect — Claire Shen</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --paper:#f9f8f5;
     --header:#efefec;
+    --white:#ffffff;
     --text:#202020;
     --muted:#7a7a7a;
     --line:#e5e5e5;
@@ -28,14 +25,12 @@
 }
 
 body{
-    background:var(--paper);
-    color:var(--text);
+    background:#ffffff; /* ✅ only confirmed change */
     font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
+    color:var(--text);
 }
 
 /* HEADER */
-
 header{
     background:var(--header);
     border-bottom:1px solid var(--line);
@@ -73,8 +68,7 @@ header{
     font-size:14px;
 }
 
-/* MAIN */
-
+/* MAIN (UNCHANGED STRUCTURE) */
 main{
     max-width:600px;
     margin:120px auto;
@@ -82,7 +76,6 @@ main{
 }
 
 /* TITLE */
-
 h1{
     font-family:'Newsreader',serif;
     font-size:34px;
@@ -91,9 +84,8 @@ h1{
 }
 
 /* BLOCK */
-
 .block{
-    margin-bottom:44px;
+    margin-bottom:40px;
 }
 
 .label{
@@ -109,7 +101,6 @@ h1{
     color:#111;
 }
 
-/* EMAIL LINK */
 .value a{
     color:#111;
     text-decoration:none;
@@ -121,15 +112,13 @@ h1{
     border-bottom:1px solid #111;
 }
 
-/* SOCIAL ROW WITH AVATAR */
-
+/* SOCIAL ROW */
 .social-row{
     display:flex;
     align-items:center;
     gap:12px;
 }
 
-/* ✅ avatar */
 .avatar{
     width:34px;
     height:34px;
@@ -140,7 +129,6 @@ h1{
 }
 
 /* FOOTER */
-
 footer{
     text-align:center;
     margin-top:120px;
@@ -148,8 +136,8 @@ footer{
     color:#999;
 }
 
+/* MOBILE */
 @media(max-width:900px){
-
     .nav{
         padding:28px 22px;
         flex-direction:column;
@@ -212,11 +200,11 @@ footer{
 
 </div>
 
+</main>
+
 <footer>
     © 2026 Claire Shen
 </footer>
-
-</main>
 
 </body>
 </html>

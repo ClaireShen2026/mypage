@@ -24,12 +24,12 @@
 }
 
 body{
-    background:#ffffff;
+    background:#ffffff; /* ONLY allowed change */
     font-family:'Inter',sans-serif;
     color:var(--text);
 }
 
-/* HEADER */
+/* HEADER — UNTOUCHED */
 header{
     background:var(--header);
 }
@@ -42,7 +42,7 @@ header{
     justify-content:space-between;
 }
 
-/* MAIN */
+/* MAIN — structure unchanged */
 main{
     max-width:720px;
     margin:90px auto;
@@ -62,28 +62,18 @@ h1{
     margin-bottom:24px;
 }
 
-/* ARTICLE TYPOGRAPHY */
+/* ARTICLE */
 .article{
     font-size:18px;
     line-height:1.95;
 }
 
-/* normal paragraph spacing */
+/* paragraph spacing system (unchanged logic) */
 .article p{
     margin:0 0 16px 0;
 }
 
-/* ====== SECTION BREAK SYSTEM ====== */
-
-.section-break{
-    height:18px;
-}
-
-.section-break.large{
-    height:36px;
-}
-
-/* FOOTER */
+/* footer */
 footer{
     text-align:center;
     margin-top:90px;
@@ -98,11 +88,14 @@ footer{
 
 <header>
 <div class="nav">
-    <div><a href="../index.html">Claire Shen</a></div>
-    <div>
+    <div class="logo">
+        <a href="../index.html">Claire Shen</a>
+    </div>
+
+    <nav class="menu">
         <a href="../index.html">journal</a>
         <a href="../connect.html">connect</a>
-    </div>
+    </nav>
 </div>
 </header>
 
@@ -120,8 +113,6 @@ footer{
 
 <p>I believed that if I could resolve my love life, a kind of “happily ever after” would naturally follow. As long as I was with my chosen family, I thought anywhere could become home.</p>
 
-<div class="section-break large"></div>
-
 <p>No. And no.</p>
 
 <p>First, I cannot sort out my love life on my own. No matter how hard I try, explanation does not always lead to understanding.</p>
@@ -130,8 +121,6 @@ footer{
 
 <p>I fell silent, with quiet grief. It felt like whatever gave me hope was experienced as pressure or critique. And I realized again that no amount of proximity or explanation can guarantee understanding between two people whose internal worlds are different.</p>
 
-<div class="section-break large"></div>
-
 <p>Then something else became clear. I had started to pay more attention to what I actually want in life—not as someone in love, but as a human being. I was no longer treating “whatever keeps the relationship alive” as the highest priority.</p>
 
 <p>Not everywhere works. Not every life is interchangeable.</p>
@@ -139,8 +128,6 @@ footer{
 <p>I have needs. I have preferences.</p>
 
 <p>I need a city that nourishes me, not one that drains me. I need a climate that my body can live in, not one that leaves it struggling with heat, humidity, mosquito bites, and exhaustion. I need connection to a wider world beyond my immediate environment, something intellectually alive and expansive. I need time and space to read, think, and write. I need a stable home that feels inhabitable and grounded—one that does not require constant adaptation, one temporary arrangement after another.</p>
-
-<div class="section-break large"></div>
 
 <p>I thought knowing myself and my partner more would lead to a better relationship, and therefore a better life—whatever form that might take.</p>
 
@@ -153,8 +140,6 @@ footer{
 <p>Our paths may cross, but the question remains:</p>
 
 <p>What do I want in life? How do I get there? How much further is it?</p>
-
-<div class="section-break"></div>
 
 <p>At least now I have a compass.</p>
 

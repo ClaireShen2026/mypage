@@ -29,10 +29,7 @@ body{
     color:var(--text);
 }
 
-/* =========================
-   HEADER (UNCHANGED)
-   ========================= */
-
+/* HEADER (UNCHANGED) */
 header{
     background:var(--header);
 }
@@ -67,16 +64,11 @@ header{
     font-size:16px;
 }
 
-/* =========================
-   MAIN (UPDATED ONLY HERE)
-   previous padding: 18px → reduced by 40%
-   18px × 0.6 = 10.8px ≈ 11px
-   ========================= */
-
+/* MAIN — ONLY REAL CHANGE HERE */
 main{
-    max-width:680px;
+    max-width:408px;   /* ✅ TRUE 40% reduction applied */
     margin:80px auto 120px;
-    padding:0 11px;   /* ← ONLY CHANGE */
+    padding:0 11px;
     background:#ffffff;
 }
 

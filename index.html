@@ -33,8 +33,6 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
-/* ---------- HEADER ---------- */
-
 header{
     background:var(--header);
 }
@@ -42,7 +40,6 @@ header{
 .nav{
     max-width:1400px;
     margin:0 auto;
-
     padding:32px 90px;
 
     display:flex;
@@ -70,11 +67,8 @@ header{
 .menu a{
     color:#111;
     text-decoration:none;
-
     font-size:16px;
     font-weight:400;
-    letter-spacing:-0.01em;
-
     text-transform:lowercase;
 }
 
@@ -82,15 +76,11 @@ header{
     opacity:.6;
 }
 
-/* ---------- CONTENT ---------- */
-
 main{
     max-width:1400px;
     margin:50px auto 220px;
     padding:0 90px;
 }
-
-/* ---------- FEATURED ARTICLE ---------- */
 
 .featured{
     display:grid;
@@ -100,8 +90,7 @@ main{
 }
 
 .cover{
-    width:100%;
-    aspect-ratio:16 / 9;
+    aspect-ratio:16/9;
     overflow:hidden;
 }
 
@@ -116,7 +105,6 @@ main{
     font-size:13px;
     color:var(--muted);
     margin-bottom:18px;
-    letter-spacing:0.01em;
 }
 
 .title{
@@ -124,9 +112,7 @@ main{
     font-size:34px;
     font-weight:400;
     line-height:1.15;
-
     max-width:520px;
-
     margin-bottom:22px;
 }
 
@@ -141,26 +127,19 @@ main{
 
 .excerpt{
     max-width:520px;
-
     font-size:16px;
     line-height:1.9;
-
     color:#555;
 }
-
-/* ---------- SPACE FOR FUTURE ARTICLES ---------- */
 
 .spacer{
     height:650px;
 }
 
-/* ---------- MOBILE ---------- */
-
 @media(max-width:900px){
 
     .nav{
         padding:28px 24px;
-
         flex-direction:column;
         align-items:flex-start;
         gap:18px;
@@ -188,16 +167,8 @@ main{
         gap:28px;
     }
 
-    .cover{
-        aspect-ratio:16 / 9;
-    }
-
     .title{
         font-size:30px;
-    }
-
-    .excerpt{
-        font-size:15px;
     }
 
     .spacer{
@@ -235,7 +206,11 @@ main{
         <div class="cover">
 
             <a href="posts/love-autonomy.html">
-                <img src="images/love-autonomy-cover.jpg" alt="Love Used to Move Me">
+
+                <img
+                    src="images/love-autonomy-cover.jpg"
+                    alt="Love Used to Move Me">
+
             </a>
 
         </div>
@@ -243,7 +218,7 @@ main{
         <div>
 
             <div class="meta">
-                journal · june 2026
+                June 2026
             </div>
 
             <h1 class="title">
@@ -256,9 +231,10 @@ main{
 
             <div class="excerpt">
 
-                Love used to be the strongest force in my life.
-                Strong enough to leave home. Strong enough to search for answers.
-                Strong enough to begin imagining a different future.
+                Knowing myself is harder than I expected. For a long time,
+                love was the clearest force in my life. It was strong enough
+                to move me out of my parents' home and build a life of my own,
+                but not enough to tell me who I was.
 
             </div>
 

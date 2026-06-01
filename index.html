@@ -9,15 +9,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
     --paper:#fafafa;
-    --header:#f1f1ef;
+    --header:#efefed;
     --text:#222222;
-    --muted:#6d6d6d;
+    --muted:#666666;
 }
 
 *{
@@ -37,19 +37,16 @@ body{
 
 header{
     background:var(--header);
-    height:170px;
-
-    display:flex;
-    align-items:center;
+    height:125px;
 }
 
 .nav{
-    width:100%;
-    max-width:1400px;
+    max-width:1320px;
+    height:100%;
 
     margin:0 auto;
 
-    padding:0 90px;
+    padding:0 70px;
 
     display:flex;
     justify-content:space-between;
@@ -57,19 +54,19 @@ header{
 }
 
 .logo{
-    font-family:'Cormorant Garamond',serif;
+    font-family:'EB Garamond',serif;
 
-    font-size:72px;
+    font-size:50px;
     font-weight:500;
 
-    letter-spacing:-0.03em;
+    letter-spacing:-0.02em;
 
     color:#1f1f1f;
 }
 
 .menu{
     display:flex;
-    gap:40px;
+    gap:32px;
 }
 
 .menu a{
@@ -77,88 +74,82 @@ header{
 
     color:#222;
 
-    font-family:'Cormorant Garamond',serif;
-    font-size:24px;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
     font-weight:400;
 
-    transition:.2s;
+    text-transform:lowercase;
 }
 
 .menu a:hover{
     opacity:.6;
 }
 
-/* ---------- MAIN ---------- */
+/* ---------- CONTENT ---------- */
 
 main{
-    max-width:1400px;
+    max-width:1320px;
 
-    margin:90px auto 180px auto;
+    margin:70px auto 250px;
 
-    padding:0 90px;
+    padding:0 70px;
 }
 
-/* ---------- POST ---------- */
-
-.post{
+.featured{
     display:grid;
 
     grid-template-columns:
-    520px
-    1fr;
+        560px
+        1fr;
 
-    gap:70px;
+    gap:60px;
 
     align-items:start;
 }
 
-.post-image img{
+.cover img{
     width:100%;
     display:block;
 }
 
-.post-meta{
-    font-size:18px;
-    color:#444;
+.meta{
+    font-size:14px;
+    color:var(--muted);
 
-    margin-bottom:28px;
-
-    font-family:'Cormorant Garamond',serif;
+    margin-bottom:22px;
 }
 
-.post-title{
-    font-family:'Cormorant Garamond',serif;
+.title{
+    font-family:'EB Garamond',serif;
 
-    font-size:68px;
-    line-height:1.05;
+    font-size:56px;
+    font-weight:400;
 
-    font-weight:500;
+    line-height:0.98;
 
     margin-bottom:24px;
 }
 
-.post-title a{
-    text-decoration:none;
+.title a{
     color:inherit;
+    text-decoration:none;
 }
 
-.post-title a:hover{
+.title a:hover{
     opacity:.75;
 }
 
-.post-excerpt{
-    max-width:620px;
+.excerpt{
+    max-width:520px;
 
-    font-size:22px;
-    line-height:1.8;
+    font-size:16px;
+    line-height:1.9;
 
     color:#555;
 }
 
-/* ---------- FUTURE SPACE ---------- */
-
 .spacer{
-    height:400px;
+    height:500px;
 }
 
 /* ---------- MOBILE ---------- */
@@ -167,44 +158,41 @@ main{
 
     header{
         height:auto;
-        padding:40px 0;
+        padding:32px 0;
     }
 
     .nav{
         padding:0 24px;
+
         flex-direction:column;
         align-items:flex-start;
-        gap:20px;
+
+        gap:16px;
     }
 
     .logo{
-        font-size:54px;
+        font-size:40px;
     }
 
     .menu{
-        gap:24px;
+        gap:20px;
     }
 
     .menu a{
-        font-size:20px;
+        font-size:14px;
     }
 
     main{
         padding:0 24px;
-        margin-top:50px;
     }
 
-    .post{
+    .featured{
         grid-template-columns:1fr;
         gap:30px;
     }
 
-    .post-title{
-        font-size:48px;
-    }
-
-    .post-excerpt{
-        font-size:18px;
+    .title{
+        font-size:42px;
     }
 }
 
@@ -233,15 +221,14 @@ main{
 
 <main>
 
-    <article class="post">
+    <section class="featured">
 
-        <div class="post-image">
+        <div class="cover">
 
             <a href="posts/love-autonomy.html">
 
-                <img
-                    src="images/love-autonomy-cover.jpg"
-                    alt="Love Used to Move Me">
+                <img src="images/love-autonomy-cover.jpg"
+                     alt="Love Used to Move Me">
 
             </a>
 
@@ -249,11 +236,11 @@ main{
 
         <div>
 
-            <div class="post-meta">
-                musings • 6/1/26
+            <div class="meta">
+                journal · june 2026
             </div>
 
-            <h1 class="post-title">
+            <h1 class="title">
 
                 <a href="posts/love-autonomy.html">
                     Love Used to Move Me
@@ -261,18 +248,18 @@ main{
 
             </h1>
 
-            <div class="post-excerpt">
+            <div class="excerpt">
 
                 Love used to be the strongest force in my life.
-                Strong enough to leave home.
-                Strong enough to search for answers.
-                Strong enough to begin imagining a different future.
+                Strong enough to leave home. Strong enough to search
+                for answers. Strong enough to begin imagining a different
+                future.
 
             </div>
 
         </div>
 
-    </article>
+    </section>
 
     <div class="spacer"></div>
 

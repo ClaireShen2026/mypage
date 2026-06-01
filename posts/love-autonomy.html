@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Love Used to Move Me — Claire Shen</title>
+<title>Beyond Romance — Claire Shen</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- ⭐ SAME FONT SYSTEM AS HOMEPAGE -->
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -22,8 +21,6 @@
     --line:#e9e9e9;
 }
 
-/* RESET */
-
 *{
     margin:0;
     padding:0;
@@ -31,17 +28,14 @@
 }
 
 body{
-    background:#fff;
+    background:var(--bg);
     color:var(--text);
-
-    /* ⭐ EXACT SAME AS HOMEPAGE */
     font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
-
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 }
 
-/* HEADER — SAME SYSTEM */
+/* HEADER */
 
 header{
     background:var(--header);
@@ -49,9 +43,9 @@ header{
 }
 
 .nav{
-    max-width:1400px;
+    max-width:1100px;
     margin:0 auto;
-    padding:32px 90px;
+    padding:32px 60px;
 
     display:flex;
     justify-content:space-between;
@@ -60,9 +54,9 @@ header{
 
 .logo{
     font-family:'Newsreader',serif;
-    font-size:36px;
+    font-size:30px;
     font-weight:400;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.02em;
 }
 
 .logo a{
@@ -72,32 +66,30 @@ header{
 
 .menu{
     display:flex;
-    gap:36px;
+    gap:30px;
 }
 
 .menu a{
     text-decoration:none;
     color:#111;
-    font-size:16px;
-    font-weight:400;
-    text-transform:lowercase;
+    font-size:14px;
 }
 
 /* MAIN */
 
 main{
-    max-width:660px;
-    margin:110px auto 180px;
+    max-width:680px;
+    margin:110px auto 140px;
     padding:0 26px;
 }
 
-/* META (same system as typical homepage usage) */
+/* META */
 
 .meta{
     font-size:12px;
     color:var(--muted);
     letter-spacing:0.04em;
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
 /* TITLE */
@@ -106,49 +98,60 @@ h1{
     font-family:'Newsreader',serif;
     font-size:42px;
     font-weight:400;
-    line-height:1.22;
+    line-height:1.2;
     letter-spacing:-0.02em;
-    margin-bottom:64px;
+    margin-bottom:60px;
 }
 
-/* ⭐ BODY — NOW FULLY MATCHING HOMEPAGE INTER SYSTEM */
+/* ARTICLE */
 
 .article{
-    font-family:'Inter', system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
-
-    font-size:15px;   /* ⭐ IMPORTANT: match homepage baseline */
-    font-weight:400;  /* ⭐ unify (no special 300 anymore) */
-    line-height:2.1;  /* ⭐ match your homepage feel */
-
-    color:#333;
+    font-size:18px;
+    line-height:1.95;
+    font-weight:300;
+    color:#1a1a1a;
 }
 
 .article p{
-    margin-bottom:34px;
+    margin-bottom:22px;
 }
 
-/* LINKS */
+.article p.section{
+    margin-top:36px;
+}
 
-.article a{
+/* CONTACT */
+
+.contact{
+    margin-top:70px;
+    font-size:14px;
+    color:#777;
+}
+
+.contact a{
     color:#111;
-    text-decoration:underline;
-    text-underline-offset:3px;
+    text-decoration:none;
+    border-bottom:1px solid #ddd;
+}
+
+.contact a:hover{
+    border-bottom:1px solid #111;
 }
 
 /* BACK */
 
 .back{
-    margin-top:100px;
+    margin-top:60px;
 }
 
 .back a{
     text-decoration:none;
-    color:#777;
-    font-size:14px;
+    color:#999;
+    font-size:13px;
 }
 
 .back a:hover{
-    color:#222;
+    color:#111;
 }
 
 /* MOBILE */
@@ -156,24 +159,19 @@ h1{
 @media(max-width:900px){
 
     .nav{
-        padding:28px 24px;
+        padding:28px 22px;
         flex-direction:column;
         align-items:flex-start;
-        gap:14px;
-    }
-
-    .logo{
-        font-size:32px;
+        gap:12px;
     }
 
     h1{
         font-size:32px;
-        margin-bottom:48px;
     }
 
     .article{
-        font-size:15px;
-        line-height:2;
+        font-size:17px;
+        line-height:1.85;
     }
 }
 
@@ -202,43 +200,72 @@ h1{
 
 <div class="meta">June 2026</div>
 
-<h1>Love Used to Move Me</h1>
+<h1>Beyond Romance</h1>
 
 <div class="article">
 
-<p>Knowing myself is harder than I expected.</p>
+<p>Most of my life changes so far have been driven by attachment in relationships. Romantic attraction once felt like the clearest signal in my life.</p>
 
-<p>
-For a long time, love was the clearest force in my life. It was strong enough to move me out of my parents' home and build a life of my own. But looking back, that autonomy had a boundary. It separated me from being someone's daughter, yet it wasn't enough to create a new identity.
-</p>
+<p>After moving out of my parents’ home and gaining autonomy in how I lived, my days became open enough that most choices felt equally acceptable. Life was stable, but without strong pressure to discover what truly suited me. In that space, attachment in relationships became the clearest direction I had.</p>
 
-<p>
-Love was different. Love gave me direction. It gave me somewhere to go, someone to move toward, and reasons to change.
-</p>
+<p>I changed cities, routines, and entire ways of living in order to stay close to someone. I believed, without fully articulating it, that if the relationship could be sustained, life would eventually organize itself around it.</p>
 
-<p>
-Eventually, I learned something that felt obvious only in hindsight: what is near may still be unreachable. Living together, trying harder, loving deeply—none of these guarantee being truly seen.
-</p>
+<p class="section">For a while, it seemed to hold.</p>
 
-<p>
-That realization didn't provide answers. It only created questions.
-</p>
+<p>But gradually, daily life began to test that belief.</p>
 
-<p>
-What kind of life suits me? What do I value when nobody is watching? What remains when love is no longer the sole compass?
-</p>
+<p>Yesterday’s quarrel started with something simple: travel plans. She needed a break, but with rising costs and limited time, options were few. I didn’t want to spend money on a short getaway while our everyday life still felt unsteady. At the same time, I was already tired from my own rhythm—monthly trips to Hong Kong, quarterly returns to Shanghai, constant movement between places.</p>
 
-<p>
-I don't think I've found those answers yet.
-</p>
+<p>When our needs didn’t align, she decided to travel alone.</p>
 
-<p>
-But learning to know myself feels like finding the first landmark on a map. The destination is still unclear. The road ahead is probably much longer than I imagine.
-</p>
+<p>That should have ended the matter. But it didn’t.</p>
 
-<p>
-Still, for the first time, the movement feels like my own.</p>
+<p class="section">The conversation shifted, quietly, into something larger—the question of how we want to live.</p>
 
+<p>I said I didn’t want to stay in Guangdong for long. Only until this exploratory phase around Hong Kong settles. The climate, the humidity, the insects, the temporary apartment—all of it wears on me in a way that makes it hard to fully rest. I feel, often, slightly out of place.</p>
+
+<p>At some point, I found myself talking about Shanghai again. Not as nostalgia, but as structure. A different rhythm of life. I imagined us there, briefly, as if the image itself could hold possibility together.</p>
+
+<p>She said she didn’t think she could afford that life.</p>
+
+<p>And suddenly, what I had described as direction was heard as dissatisfaction with the present.</p>
+
+<p>I tried to respond, but the conversation had already hardened. Any further explanation felt like it would only widen the distance. Eventually, I stopped speaking.</p>
+
+<p>Not because I had nothing to say—but because I didn’t know how to say it without turning a desire for another life into rejection of this one.</p>
+
+<p>So I stayed quiet.</p>
+
+<p class="section">Later, I kept returning to something I used to believe: that once I understood myself better, life would begin to take shape around me.</p>
+
+<p>Now it feels more like seeing a map for the first time and realizing how far things still are.</p>
+
+<p>What felt close was never as close as I thought. What I am trying to build will not appear through adjustment alone. It has to be constructed slowly, from the ground.</p>
+
+<p>Each person moves with their own gravity.</p>
+
+<p>We are not held together by intention, but by alignment that may or may not last.</p>
+
+<p>Love is not a destination. It is what sometimes appears when paths happen to overlap.</p>
+
+<p>I used to believe that finding the right person would give life its shape.</p>
+
+<p>Now I think life has to be shaped first.</p>
+
+<p>And even then, it is not shared evenly.</p>
+
+<p class="section">The strange clarity in this is not comfort. It is direction.</p>
+
+<p>I am no longer waiting for life to organize itself around attachment.</p>
+
+<p>I am learning how to follow what I am drawn toward as a person—not only as someone in love.</p>
+
+<p>And that, for now, is enough.</p>
+
+</div>
+
+<div class="contact">
+Contact: <a href="mailto:hello@claire-shen.com">hello@claire-shen.com</a>
 </div>
 
 <div class="back">

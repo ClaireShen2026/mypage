@@ -14,14 +14,10 @@
 <style>
 
 :root{
-    --bg:#ffffff;
     --text:#111;
     --muted:#8a8a8a;
     --line:#e9e9e9;
-
-    --header-a:#efefec;
-    --header-b:#f5f3ef;
-    --header-c:#f1f4f2;
+    --bg:#ffffff;
 }
 
 /* RESET */
@@ -42,15 +38,9 @@ body{
 /* HEADER */
 
 header{
-    background:var(--header-a);
-    border-bottom:1px solid var(--line);
-}
-
-.nav{
     max-width:1100px;
     margin:0 auto;
     padding:34px 60px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -73,14 +63,14 @@ nav a{
 
 main{
     max-width:1100px;
-    margin:70px auto 120px;
+    margin:60px auto 120px;
     padding:0 60px;
 }
 
 /* INTRO */
 
 .intro{
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .intro h1{
@@ -98,52 +88,59 @@ main{
     line-height:1.7;
 }
 
-/* GRID */
+/* FEED */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:34px;
+.feed{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
 }
 
-/* CARD */
+/* ITEM */
 
-.card{
-    border:1px solid var(--line);
-    overflow:hidden;
-    background:#fff;
-    transition:0.2s ease;
+.item{
+    display:flex;
+    gap:24px;
+    text-decoration:none;
+    color:inherit;
+    padding-bottom:26px;
+    border-bottom:1px solid var(--line);
 }
 
-.card:hover{
-    transform:translateY(-2px);
-}
+/* THUMB */
 
 .thumb{
-    height:220px;
-    background:#ddd;
+    width:180px;
+    height:120px;
+    flex-shrink:0;
+    overflow:hidden;
+    background:#eee;
 }
 
-.card:nth-child(1) .thumb{ background:var(--header-a); }
-.card:nth-child(2) .thumb{ background:var(--header-b); }
-.card:nth-child(3) .thumb{ background:var(--header-c); }
+.thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CONTENT */
 
 .content{
-    padding:22px 22px 26px;
+    flex:1;
 }
 
 .title{
     font-family:'Newsreader', serif;
-    font-size:22px;
+    font-size:24px;
     font-weight:400;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .excerpt{
     font-size:15px;
     line-height:1.7;
     color:#444;
-    margin-bottom:14px;
+    margin-bottom:10px;
 }
 
 .meta{
@@ -151,28 +148,40 @@ main{
     color:var(--muted);
 }
 
+/* HOVER */
+
+.item:hover .title{
+    text-decoration:underline;
+    text-underline-offset:3px;
+}
+
 /* FOOT */
 
 footer{
-    margin-top:90px;
+    margin-top:80px;
     font-size:14px;
     color:var(--muted);
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:800px){
 
-    main{
-        padding:0 22px;
+    header, main{
+        padding:24px 22px;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .item{
+        flex-direction:column;
     }
 
-    .intro h1{
-        font-size:34px;
+    .thumb{
+        width:100%;
+        height:200px;
+    }
+
+    .title{
+        font-size:22px;
     }
 }
 
@@ -182,14 +191,12 @@ footer{
 <body>
 
 <header>
-<div class="nav">
     <div class="logo">Claire Shen</div>
     <nav>
         <a href="index.html">journal</a>
         <a href="about.html">about</a>
         <a href="connect.html">connect</a>
     </nav>
-</div>
 </header>
 
 <main>
@@ -199,23 +206,30 @@ footer{
 <div class="intro">
     <h1>Writing as a way of reorienting life</h1>
     <p>
-        I write to understand how I move through attachment, autonomy, and the search for a life that feels genuinely my own.
+        I explore attachment, autonomy, and what it means to build a life guided by internal direction rather than relationship gravity.
     </p>
 </div>
 
-<!-- GRID -->
+<!-- FEED -->
 
-<div class="grid">
+<div class="feed">
 
-    <a class="card" href="beyond-romance.html">
-        <div class="thumb"></div>
+    <a class="item" href="posts/beyond-romance.html">
+
+        <div class="thumb">
+            <img src="images/IMG_1464.jpeg" alt="Beyond Romance">
+        </div>
+
         <div class="content">
             <div class="title">Beyond Romance</div>
+
             <div class="excerpt">
                 I used to move through life guided by relationships. Now I am learning to follow what excites me as a person, not as someone in love.
             </div>
+
             <div class="meta">June 2026 · essay</div>
         </div>
+
     </a>
 
 </div>

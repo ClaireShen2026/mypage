@@ -9,21 +9,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --paper:#fafafa;
-    --header:#efefed;
-    --text:#222222;
-    --muted:#666666;
+    --paper:#fafaf8;
+    --header:#efefec;
+    --text:#202020;
+    --muted:#707070;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -37,16 +41,16 @@ body{
 
 header{
     background:var(--header);
-    height:125px;
+    height:130px;
 }
 
 .nav{
-    max-width:1320px;
+    max-width:1400px;
     height:100%;
 
     margin:0 auto;
 
-    padding:0 70px;
+    padding:0 90px;
 
     display:flex;
     justify-content:space-between;
@@ -54,61 +58,68 @@ header{
 }
 
 .logo{
-    font-family:'EB Garamond',serif;
-
-    font-size:50px;
-    font-weight:500;
-
+    font-family:'DM Serif Display',serif;
+    font-size:58px;
+    font-weight:400;
+    line-height:1;
     letter-spacing:-0.02em;
+}
 
-    color:#1f1f1f;
+.logo a{
+    text-decoration:none;
+    color:inherit;
 }
 
 .menu{
     display:flex;
-    gap:32px;
+    gap:42px;
 }
 
 .menu a{
     text-decoration:none;
+    color:var(--text);
 
-    color:#222;
-
-    font-family:'Inter',sans-serif;
     font-size:15px;
     font-weight:400;
 
     text-transform:lowercase;
+
+    transition:opacity .2s ease;
 }
 
 .menu a:hover{
-    opacity:.6;
+    opacity:.55;
 }
 
-/* ---------- CONTENT ---------- */
+/* ---------- MAIN ---------- */
 
 main{
-    max-width:1320px;
-
-    margin:70px auto 250px;
-
-    padding:0 70px;
+    max-width:1400px;
+    margin:85px auto 260px;
+    padding:0 90px;
 }
+
+/* ---------- FEATURED POST ---------- */
 
 .featured{
     display:grid;
 
     grid-template-columns:
-        560px
-        1fr;
+        340px
+        minmax(0, 1fr);
 
-    gap:60px;
+    gap:70px;
 
     align-items:start;
 }
 
+.cover{
+    width:100%;
+}
+
 .cover img{
     width:100%;
+    height:auto;
     display:block;
 }
 
@@ -117,39 +128,45 @@ main{
     color:var(--muted);
 
     margin-bottom:22px;
+
+    letter-spacing:.01em;
 }
 
 .title{
-    font-family:'EB Garamond',serif;
+    font-family:'DM Serif Display',serif;
 
-    font-size:56px;
+    font-size:66px;
     font-weight:400;
 
-    line-height:0.98;
+    line-height:1.02;
 
-    margin-bottom:24px;
+    margin-bottom:28px;
+
+    max-width:760px;
 }
 
 .title a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 .title a:hover{
-    opacity:.75;
+    opacity:.7;
 }
 
 .excerpt{
-    max-width:520px;
+    max-width:720px;
 
-    font-size:16px;
+    font-size:18px;
     line-height:1.9;
 
     color:#555;
 }
 
+/* ---------- FUTURE SPACE ---------- */
+
 .spacer{
-    height:500px;
+    height:520px;
 }
 
 /* ---------- MOBILE ---------- */
@@ -158,7 +175,7 @@ main{
 
     header{
         height:auto;
-        padding:32px 0;
+        padding:30px 0;
     }
 
     .nav{
@@ -167,15 +184,15 @@ main{
         flex-direction:column;
         align-items:flex-start;
 
-        gap:16px;
+        gap:18px;
     }
 
     .logo{
-        font-size:40px;
+        font-size:42px;
     }
 
     .menu{
-        gap:20px;
+        gap:22px;
     }
 
     .menu a{
@@ -184,15 +201,20 @@ main{
 
     main{
         padding:0 24px;
+        margin-top:45px;
     }
 
     .featured{
         grid-template-columns:1fr;
-        gap:30px;
+        gap:32px;
     }
 
     .title{
-        font-size:42px;
+        font-size:46px;
+    }
+
+    .excerpt{
+        font-size:16px;
     }
 }
 
@@ -206,7 +228,7 @@ main{
     <div class="nav">
 
         <div class="logo">
-            Claire Shen
+            <a href="index.html">Claire Shen</a>
         </div>
 
         <nav class="menu">
@@ -227,8 +249,9 @@ main{
 
             <a href="posts/love-autonomy.html">
 
-                <img src="images/love-autonomy-cover.jpg"
-                     alt="Love Used to Move Me">
+                <img
+                    src="images/love-autonomy-cover.jpg"
+                    alt="Love Used to Move Me">
 
             </a>
 
@@ -251,9 +274,8 @@ main{
             <div class="excerpt">
 
                 Love used to be the strongest force in my life.
-                Strong enough to leave home. Strong enough to search
-                for answers. Strong enough to begin imagining a different
-                future.
+                Strong enough to leave home. Strong enough to search for answers.
+                Strong enough to begin imagining a different future.
 
             </div>
 

@@ -30,7 +30,7 @@ body{
 }
 
 /* =========================
-   HEADER (EXACT MATCH INDEX)
+   HEADER (UNCHANGED)
    ========================= */
 
 header{
@@ -68,13 +68,15 @@ header{
 }
 
 /* =========================
-   MAIN (NARROWER THAN BEFORE)
+   MAIN (UPDATED ONLY HERE)
+   previous padding: 18px → reduced by 40%
+   18px × 0.6 = 10.8px ≈ 11px
    ========================= */
 
 main{
-    max-width:680px;   /* ↓ narrower per your request */
+    max-width:680px;
     margin:80px auto 120px;
-    padding:0 18px;    /* ↓ tighter side padding */
+    padding:0 11px;   /* ← ONLY CHANGE */
     background:#ffffff;
 }
 
@@ -96,7 +98,6 @@ h1{
     line-height:1.95;
 }
 
-/* paragraph spacing ONLY */
 .article p{
     margin:0 0 16px 0;
 }
@@ -114,7 +115,6 @@ footer{
 
 <body>
 
-<!-- HEADER (IDENTICAL TO HOMEPAGE) -->
 <header>
 <div class="nav">
 

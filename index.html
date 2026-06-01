@@ -6,14 +6,18 @@
 
 <title>Claire Shen</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 
 :root{
-    --paper:#faf8f4;
-    --header:#f3f0ea;
-    --text:#2f2d2a;
-    --muted:#7d7972;
-    --border:#e8e4de;
+    --paper:#fafafa;
+    --header:#f1f1ef;
+    --text:#222222;
+    --muted:#6d6d6d;
 }
 
 *{
@@ -25,190 +29,182 @@
 body{
     background:var(--paper);
     color:var(--text);
-
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
-
+    font-family:'Inter',sans-serif;
     -webkit-font-smoothing:antialiased;
 }
 
 /* ---------- HEADER ---------- */
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:72px;
+    background:var(--header);
+    height:170px;
 
-    background:rgba(243,240,234,.92);
-
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid var(--border);
-
-    z-index:999;
+    display:flex;
+    align-items:center;
 }
 
 .nav{
-    max-width:1280px;
-    margin:auto;
-    height:100%;
+    width:100%;
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:0 90px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:0 48px;
 }
 
 .logo{
-    font-family:
-    Baskerville,
-    "Iowan Old Style",
-    Palatino,
-    serif;
+    font-family:'Cormorant Garamond',serif;
 
-    font-size:26px;
-    font-weight:400;
+    font-size:72px;
+    font-weight:500;
 
-    letter-spacing:-0.02em;
+    letter-spacing:-0.03em;
 
-    color:var(--text);
+    color:#1f1f1f;
 }
 
 .menu{
     display:flex;
-    gap:34px;
+    gap:40px;
 }
 
 .menu a{
     text-decoration:none;
 
-    color:var(--muted);
+    color:#222;
 
-    font-size:14px;
-    letter-spacing:.02em;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    font-weight:400;
 
-    transition:.2s ease;
+    transition:.2s;
 }
 
 .menu a:hover{
-    color:var(--text);
+    opacity:.6;
 }
 
 /* ---------- MAIN ---------- */
 
 main{
-    max-width:1280px;
-    margin:auto;
+    max-width:1400px;
 
-    padding-top:120px;
-    padding-left:48px;
-    padding-right:48px;
+    margin:90px auto 180px auto;
+
+    padding:0 90px;
 }
 
-/* ---------- ARTICLE ---------- */
+/* ---------- POST ---------- */
 
-.article{
+.post{
     display:grid;
 
     grid-template-columns:
-    minmax(400px,700px)
+    520px
     1fr;
 
-    gap:90px;
+    gap:70px;
 
-    align-items:center;
-
-    margin-bottom:140px;
+    align-items:start;
 }
 
-.article-image{
-    overflow:hidden;
-}
-
-.article-image img{
+.post-image img{
     width:100%;
     display:block;
-
-    transition:transform .8s ease;
 }
 
-.article:hover img{
-    transform:scale(1.02);
+.post-meta{
+    font-size:18px;
+    color:#444;
+
+    margin-bottom:28px;
+
+    font-family:'Cormorant Garamond',serif;
 }
 
-.article-content{
-    max-width:460px;
-}
+.post-title{
+    font-family:'Cormorant Garamond',serif;
 
-.article-date{
-    font-size:13px;
-    color:var(--muted);
+    font-size:68px;
+    line-height:1.05;
 
-    margin-bottom:18px;
-
-    letter-spacing:.04em;
-}
-
-.article-title{
-    font-family:
-    Baskerville,
-    "Iowan Old Style",
-    Palatino,
-    serif;
-
-    font-size:54px;
-    font-weight:400;
-
-    line-height:1.08;
+    font-weight:500;
 
     margin-bottom:24px;
 }
 
-.article-title a{
-    color:inherit;
+.post-title a{
     text-decoration:none;
+    color:inherit;
 }
 
-.article-title a:hover{
+.post-title a:hover{
     opacity:.75;
 }
 
-.article-excerpt{
-    font-size:18px;
+.post-excerpt{
+    max-width:620px;
+
+    font-size:22px;
     line-height:1.8;
 
-    color:#5f5a55;
+    color:#555;
+}
+
+/* ---------- FUTURE SPACE ---------- */
+
+.spacer{
+    height:400px;
 }
 
 /* ---------- MOBILE ---------- */
 
-@media(max-width:900px){
+@media(max-width:1000px){
+
+    header{
+        height:auto;
+        padding:40px 0;
+    }
 
     .nav{
         padding:0 24px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
     }
 
-    main{
-        padding-left:24px;
-        padding-right:24px;
-    }
-
-    .article{
-        grid-template-columns:1fr;
-        gap:32px;
-    }
-
-    .article-title{
-        font-size:38px;
+    .logo{
+        font-size:54px;
     }
 
     .menu{
-        gap:18px;
+        gap:24px;
+    }
+
+    .menu a{
+        font-size:20px;
+    }
+
+    main{
+        padding:0 24px;
+        margin-top:50px;
+    }
+
+    .post{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .post-title{
+        font-size:48px;
+    }
+
+    .post-excerpt{
+        font-size:18px;
     }
 }
 
@@ -226,9 +222,9 @@ main{
         </div>
 
         <nav class="menu">
-            <a href="index.html">Journal</a>
-            <a href="about.html">About</a>
-            <a href="connect.html">Connect</a>
+            <a href="index.html">journal</a>
+            <a href="about.html">about</a>
+            <a href="connect.html">connect</a>
         </nav>
 
     </div>
@@ -237,36 +233,48 @@ main{
 
 <main>
 
-    <article class="article">
+    <article class="post">
 
-        <div class="article-image">
+        <div class="post-image">
+
             <a href="posts/love-autonomy.html">
-                <img src="images/love-autonomy-cover.jpg"
-                     alt="Love Used to Move Me">
+
+                <img
+                    src="images/love-autonomy-cover.jpg"
+                    alt="Love Used to Move Me">
+
             </a>
+
         </div>
 
-        <div class="article-content">
+        <div>
 
-            <div class="article-date">
-                June 2026
+            <div class="post-meta">
+                musings • 6/1/26
             </div>
 
-            <h2 class="article-title">
+            <h1 class="post-title">
+
                 <a href="posts/love-autonomy.html">
                     Love Used to Move Me
                 </a>
-            </h2>
 
-            <p class="article-excerpt">
-                Autonomy gave me space but not direction.
-                Knowing myself turned out to be the beginning,
-                not the destination.
-            </p>
+            </h1>
+
+            <div class="post-excerpt">
+
+                Love used to be the strongest force in my life.
+                Strong enough to leave home.
+                Strong enough to search for answers.
+                Strong enough to begin imagining a different future.
+
+            </div>
 
         </div>
 
     </article>
+
+    <div class="spacer"></div>
 
 </main>
 

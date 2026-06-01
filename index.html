@@ -14,10 +14,11 @@
 <style>
 
 :root{
-    --paper:#f9f8f5;
     --header:#efefec;
+    --white:#ffffff;
     --text:#202020;
     --muted:#7a7a7a;
+    --line:#e5e5e5;
 }
 
 *{
@@ -27,10 +28,9 @@
 }
 
 body{
-    background:var(--paper);
+    background:var(--white);
     color:var(--text);
     font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
 }
 
 /* HEADER */
@@ -43,7 +43,6 @@ header{
     max-width:1400px;
     margin:0 auto;
     padding:32px 90px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -52,7 +51,6 @@ header{
 .logo{
     font-family:'Newsreader',serif;
     font-size:36px;
-    font-weight:400;
 }
 
 .logo a{
@@ -74,6 +72,7 @@ header{
 /* MAIN */
 
 main{
+    background:var(--white);
     max-width:1400px;
     margin:60px auto 120px;
     padding:0 90px;
@@ -85,12 +84,6 @@ main{
     display:grid;
     grid-template-columns:360px 1fr;
     gap:72px;
-    align-items:start;
-}
-
-.cover{
-    aspect-ratio:4/3;
-    overflow:hidden;
 }
 
 .cover img{
@@ -109,7 +102,6 @@ main{
 .title{
     font-family:'Newsreader',serif;
     font-size:30px;
-    font-weight:400;
     margin-bottom:18px;
 }
 
@@ -122,10 +114,7 @@ main{
     font-size:16px;
     line-height:1.9;
     color:#555;
-    max-width:520px;
 }
-
-/* COMING SOON */
 
 .future{
     margin-top:80px;
@@ -133,22 +122,16 @@ main{
     color:#888;
 }
 
-/* SPACING */
-
 .spacer{
     height:140px;
 }
 
-/* FOOTER (MINIMAL) */
+/* FOOTER */
 
 footer{
-    border-top:1px solid #e5e5e5;
-    padding:40px 20px;
-    margin-top:80px;
+    background:var(--white);
     text-align:center;
-}
-
-.copy{
+    padding:30px 0;
     font-size:12px;
     color:#999;
 }
@@ -156,34 +139,9 @@ footer{
 /* MOBILE */
 
 @media(max-width:900px){
-
-    .nav{
-        padding:28px 22px;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:16px;
-    }
-
-    main{
-        padding:0 22px;
-    }
-
-    .featured{
-        grid-template-columns:1fr;
-        gap:26px;
-    }
-
-    footer{
-        padding:40px 20px;
-    }
-}
-
-.avatar{
-    width:36px;
-    height:36px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center;
+    .nav{padding:28px 22px; flex-direction:column; align-items:flex-start; gap:14px;}
+    main{padding:0 22px;}
+    .featured{grid-template-columns:1fr;}
 }
 
 </style>
@@ -193,17 +151,12 @@ footer{
 
 <header>
 <div class="nav">
-
-    <div class="logo">
-        <a href="index.html">Claire Shen</a>
-    </div>
-
+    <div class="logo"><a href="index.html">Claire Shen</a></div>
     <nav class="menu">
         <a href="index.html">journal</a>
         <a href="about.html">about</a>
         <a href="connect.html">connect</a>
     </nav>
-
 </div>
 </header>
 
@@ -213,39 +166,29 @@ footer{
 
     <div class="cover">
         <a href="posts/beyond-romance.html">
-            <img src="images/IMG_1464.jpeg" alt="Beyond Romance">
+            <img src="images/IMG_1464.jpeg">
         </a>
     </div>
 
     <div>
-
         <div class="meta">June 2026</div>
-
         <h1 class="title">
             <a href="posts/beyond-romance.html">Beyond Romance</a>
         </h1>
-
         <div class="excerpt">
-            A reflection on attachment, direction, and how romantic relationships once functioned as my primary compass for life decisions.
+            A reflection on attachment and direction in life decisions.
         </div>
-
     </div>
 
 </section>
 
-<div class="future">
-    More articles coming soon.
-</div>
+<div class="future">More articles coming soon.</div>
 
 <div class="spacer"></div>
 
 </main>
 
-<footer>
-    <div class="copy">
-        © 2026 Claire Shen
-    </div>
-</footer>
+<footer>© 2026 Claire Shen</footer>
 
 </body>
 </html>

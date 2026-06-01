@@ -14,10 +14,10 @@
 <style>
 
 :root{
-    --paper:#f9f8f5;
-    --header:#efefec;
-    --text:#222;
-    --muted:#8a8a8a;
+    --bg:#ffffff;
+    --text:#111;
+    --muted:#9a9a9a;
+    --line:#eeeeee;
 }
 
 *{
@@ -27,22 +27,24 @@
 }
 
 body{
-    background:var(--paper);
+    background:#fff; /* ⭐关键：纯白 */
     color:var(--text);
     font-family:'Inter',sans-serif;
     -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
 }
 
 /* HEADER */
 
 header{
-    background:var(--header);
+    background:#fff;
+    border-bottom:1px solid var(--line);
 }
 
 .nav{
-    max-width:1400px;
+    max-width:1100px;
     margin:0 auto;
-    padding:32px 90px;
+    padding:28px 60px;
 
     display:flex;
     justify-content:space-between;
@@ -51,9 +53,9 @@ header{
 
 .logo{
     font-family:'Newsreader',serif;
-    font-size:36px;
+    font-size:30px;
     font-weight:400;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.02em;
 }
 
 .logo a{
@@ -63,66 +65,74 @@ header{
 
 .menu{
     display:flex;
-    gap:36px;
+    gap:30px;
 }
 
 .menu a{
     text-decoration:none;
     color:#111;
-    font-size:16px;
-    font-weight:400;
-    text-transform:lowercase;
+    font-size:14px;
 }
 
-/* ARTICLE */
+/* ARTICLE LAYOUT */
 
 main{
-    max-width:720px;
-    margin:110px auto 180px;
-    padding:0 30px;
+    max-width:680px; /* ⭐更接近 octo8 */
+    margin:100px auto 160px;
+    padding:0 24px;
 }
 
 .meta{
     font-size:13px;
     color:var(--muted);
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
+
+/* TITLE */
 
 h1{
     font-family:'Newsreader',serif;
-    font-size:34px;
+    font-size:40px; /* ⭐更大 */
     font-weight:400;
-    line-height:1.2;
+    line-height:1.25;
+    letter-spacing:-0.02em;
 
-    margin-bottom:70px;
+    margin-bottom:64px;
 }
 
+/* BODY TEXT */
+
 .article{
-    font-size:15px;
-    line-height:2.1;
-    color:#333;
+    font-size:18px; /* ⭐关键升级 */
+    line-height:1.95;
+    color:#1a1a1a;
 }
 
 .article p{
-    margin-bottom:34px;
+    margin-bottom:26px; /* ⭐节奏更像 editorial */
 }
 
-.article em{
-    font-style:italic;
+/* LINKS */
+.article a{
+    color:#111;
+    text-decoration:underline;
+    text-underline-offset:3px;
 }
+
+/* BACK */
 
 .back{
-    margin-top:100px;
+    margin-top:90px;
 }
 
 .back a{
     text-decoration:none;
-    color:#777;
+    color:#999;
     font-size:14px;
 }
 
 .back a:hover{
-    color:#222;
+    color:#111;
 }
 
 /* MOBILE */
@@ -130,29 +140,23 @@ h1{
 @media(max-width:900px){
 
     .nav{
-        padding:28px 24px;
+        padding:24px 20px;
         flex-direction:column;
         align-items:flex-start;
-        gap:18px;
+        gap:14px;
     }
 
-    .logo{
+    h1{
         font-size:32px;
+        margin-bottom:48px;
+    }
+
+    .article{
+        font-size:17px;
     }
 
     main{
         margin-top:70px;
-        padding:0 24px;
-    }
-
-    h1{
-        font-size:30px;
-        margin-bottom:50px;
-    }
-
-    .article{
-        font-size:15px;
-        line-height:2;
     }
 }
 
@@ -162,7 +166,6 @@ h1{
 <body>
 
 <header>
-
 <div class="nav">
 
 <div class="logo">
@@ -176,24 +179,17 @@ h1{
 </nav>
 
 </div>
-
 </header>
 
 <main>
 
-<div class="meta">
-June 2026
-</div>
+<div class="meta">June 2026</div>
 
-<h1>
-Love Used to Move Me
-</h1>
+<h1>Love Used to Move Me</h1>
 
 <div class="article">
 
-<p>
-Knowing myself is harder than I expected.
-</p>
+<p>Knowing myself is harder than I expected.</p>
 
 <p>
 For a long time, love was the clearest force in my life. It was strong enough to move me out of my parents' home and build a life of my own. But looking back, that autonomy had a boundary. It separated me from being someone's daughter, yet it wasn't enough to create a new identity.
@@ -216,16 +212,14 @@ What kind of life suits me? What do I value when nobody is watching? What remain
 </p>
 
 <p>
-I don't think I've found those answers yet.
-</p>
+I don't think I've found those answers yet.</p>
 
 <p>
 But learning to know myself feels like finding the first landmark on a map. The destination is still unclear. The road ahead is probably much longer than I imagine.
 </p>
 
 <p>
-Still, for the first time, the movement feels like my own.
-</p>
+Still, for the first time, the movement feels like my own.</p>
 
 </div>
 

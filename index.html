@@ -9,25 +9,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --paper:#fafaf8;
-    --header:#efefec;
-    --text:#202020;
-    --muted:#707070;
+    --paper:#fbfbf9;
+    --header:#f0f0ed;
+    --text:#222;
+    --muted:#777;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -41,16 +37,13 @@ body{
 
 header{
     background:var(--header);
-    height:130px;
 }
 
 .nav{
     max-width:1400px;
-    height:100%;
-
     margin:0 auto;
 
-    padding:0 90px;
+    padding:38px 80px;
 
     display:flex;
     justify-content:space-between;
@@ -58,96 +51,78 @@ header{
 }
 
 .logo{
-    font-family:'DM Serif Display',serif;
-    font-size:58px;
+    font-family:'Newsreader',serif;
+    font-size:42px;
     font-weight:400;
-    line-height:1;
-    letter-spacing:-0.02em;
+    letter-spacing:-0.03em;
 }
 
 .logo a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 .menu{
     display:flex;
-    gap:42px;
+    gap:34px;
 }
 
 .menu a{
+    color:#333;
     text-decoration:none;
-    color:var(--text);
 
     font-size:15px;
-    font-weight:400;
+    font-weight:300;
 
     text-transform:lowercase;
-
-    transition:opacity .2s ease;
 }
 
 .menu a:hover{
-    opacity:.55;
+    opacity:.6;
 }
 
-/* ---------- MAIN ---------- */
+/* ---------- CONTENT ---------- */
 
 main{
     max-width:1400px;
-    margin:85px auto 260px;
-    padding:0 90px;
+    margin:70px auto 240px;
+    padding:0 80px;
 }
 
-/* ---------- FEATURED POST ---------- */
+/* ---------- ARTICLE ---------- */
 
 .featured{
     display:grid;
-
-    grid-template-columns:
-        340px
-        minmax(0, 1fr);
-
-    gap:70px;
-
+    grid-template-columns:260px 1fr;
+    gap:65px;
     align-items:start;
-}
-
-.cover{
-    width:100%;
 }
 
 .cover img{
     width:100%;
-    height:auto;
     display:block;
 }
 
 .meta{
-    font-size:14px;
+    font-size:13px;
     color:var(--muted);
-
-    margin-bottom:22px;
-
-    letter-spacing:.01em;
+    margin-bottom:18px;
 }
 
 .title{
-    font-family:'DM Serif Display',serif;
-
-    font-size:66px;
+    font-family:'Newsreader',serif;
+    font-size:48px;
     font-weight:400;
+    line-height:1.05;
 
-    line-height:1.02;
+    max-width:680px;
 
-    margin-bottom:28px;
-
-    max-width:760px;
+    margin-bottom:22px;
 }
 
 .title a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 .title a:hover{
@@ -155,44 +130,37 @@ main{
 }
 
 .excerpt{
-    max-width:720px;
+    max-width:600px;
 
-    font-size:18px;
-    line-height:1.9;
+    font-size:16px;
+    line-height:1.85;
 
     color:#555;
 }
 
-/* ---------- FUTURE SPACE ---------- */
+/* ---------- EMPTY SPACE ---------- */
 
 .spacer{
-    height:520px;
+    height:600px;
 }
 
 /* ---------- MOBILE ---------- */
 
-@media(max-width:1000px){
-
-    header{
-        height:auto;
-        padding:30px 0;
-    }
+@media(max-width:900px){
 
     .nav{
-        padding:0 24px;
-
+        padding:28px 24px;
         flex-direction:column;
         align-items:flex-start;
-
         gap:18px;
     }
 
     .logo{
-        font-size:42px;
+        font-size:34px;
     }
 
     .menu{
-        gap:22px;
+        gap:20px;
     }
 
     .menu a{
@@ -201,20 +169,16 @@ main{
 
     main{
         padding:0 24px;
-        margin-top:45px;
+        margin-top:40px;
     }
 
     .featured{
         grid-template-columns:1fr;
-        gap:32px;
+        gap:28px;
     }
 
     .title{
-        font-size:46px;
-    }
-
-    .excerpt{
-        font-size:16px;
+        font-size:38px;
     }
 }
 
@@ -248,11 +212,7 @@ main{
         <div class="cover">
 
             <a href="posts/love-autonomy.html">
-
-                <img
-                    src="images/love-autonomy-cover.jpg"
-                    alt="Love Used to Move Me">
-
+                <img src="images/love-autonomy-cover.jpg" alt="Love Used to Move Me">
             </a>
 
         </div>

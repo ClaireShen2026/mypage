@@ -29,7 +29,10 @@ body{
     color:var(--text);
 }
 
-/* HEADER (UNCHANGED) */
+/* =========================
+   HEADER (MATCH CONNECT PAGE EXACTLY)
+   ========================= */
+
 header{
     background:var(--header);
 }
@@ -64,6 +67,16 @@ header{
     font-size:16px;
 }
 
+/* MOBILE (EXACT SAME AS CONNECT) */
+@media(max-width:900px){
+    .nav{
+        padding:28px 22px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+}
+
 /* =========================
    MAIN — FIXED (WIDER CONTENT)
    ========================= */
@@ -71,7 +84,7 @@ header{
 main{
     max-width:920px;   /* ✅ FIX: wider content area */
     margin:80px auto 120px;
-    padding:0 24px;    /* slightly wider usable space */
+    padding:0 24px;
     background:#ffffff;
 }
 
